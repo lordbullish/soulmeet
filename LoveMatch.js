@@ -2,8 +2,8 @@ const theObject = {
     userData(name, dob, mob, heart){
         return {
             name,
-            mob,
-            heart
+            dob,
+            mob
         }
     }
 }
