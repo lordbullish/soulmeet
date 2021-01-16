@@ -1,4 +1,4 @@
-const zodiacCalculator =(dob, mob)=>{
+const zodiacCalculator =(dob, mob)=>{ //Determines zodiac sign from the user's date and month of birth
     switch(mob){
         case 1:
             if(dob>=1 && dob<=20){return 'Capricorn'}else if(dob>=21 && dob<=31){return 'Aquarius'}
@@ -38,8 +38,17 @@ const zodiacCalculator =(dob, mob)=>{
             break;
     }
 }
+
+//compatibility function
+const compatibility =(user, crush)=>{
+    let a = user.zodiacSign
+    let b = crush.zodiacSign
+
+}
+
+//love match object
 const theObject = {
-    userData(name, dob, mob){
+    userData(name, dob, mob){ //User data
         return {
             name,
             dob,
@@ -47,13 +56,16 @@ const theObject = {
             zodiacSign: zodiacCalculator(dob,mob)
         }
     },
-    crushData(name, dob, mob){
+    crushData(name, dob, mob){ //User's crush's data
         return {
             name,
             dob,
             mob,
             zodiacSign: zodiacCalculator(dob, mob)
         }
+    },
+    match(){ //Match object data
+
     }
 }
 
